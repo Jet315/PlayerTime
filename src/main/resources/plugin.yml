@@ -1,0 +1,11 @@
+name: PlayerTime
+version: 1.0
+description: A plugin that counts global player timer and manages boosters
+main: me.jet315.play.PlayerTimer
+commands:
+  timeplayed:
+    description: Shows time played
+    aliases: [playtime]
+  boosters:
+    description: Shows boosters a player has
+    aliases: [booster]

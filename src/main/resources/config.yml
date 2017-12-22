@@ -1,0 +1,23 @@
+database:
+  #MySQL database host
+  mySQLHost: localhost
+  #MySQL connection port number
+  mySQLPort: 3306
+  #MySQL database name
+  mySQLDatabase: PlayerManager
+  #MySQL database user
+  mySQLUser: root
+  #MySQL user's password
+  mySQLPassword: ""
+#Timeout in seconds you want to update playertime
+timeout: 60
+#How many minutes does a player need to player need to play to execute the set of commands listed below
+#Current example is every 10 minutes, give the player a diamond and a stone sword
+minutesPlayedToExecuteCommands: 10
+#CURRENTLY DISABLED UNTIl/IF I RELEASE ONTO SPIGOT (Using unneeded server performance) / Or not needed
+Commands:
+- 'give %player% diamond 1'
+- 'give %player% STONE_WORD 1'
+#Name of server
+serverName: "serverName"
+defaultRank: "default"
