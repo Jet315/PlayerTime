@@ -43,7 +43,6 @@ public class PlayerTimer extends JavaPlugin{
         clock = new Clock(timeout,commandDelay,defaultRank,pm);
 
 
-
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new LeaveEvent(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new InvClick(getConfig().getString("serverName"),defaultRank), this);
@@ -64,10 +63,7 @@ public class PlayerTimer extends JavaPlugin{
 
     @Override
     public void onDisable() {
-/*        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "permissions group "+ defaultRank+ " unset booster.2");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "permissions group "+ defaultRank+ " unset booster.3");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "permissions group "+ defaultRank+ " unset booster.4");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "permissions group "+ defaultRank+ " unset booster.5");*/
+
         for(Player p : Bukkit.getOnlinePlayers()){
             getPM().savePlayerOnDisable(p);
         }
