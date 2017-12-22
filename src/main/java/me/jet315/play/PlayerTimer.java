@@ -34,8 +34,8 @@ public class PlayerTimer extends JavaPlugin{
     public void onEnable() {
         instance = this;
         hikari = new HikariDataSource();
-        pm = new PlayerManager();
         g = new GUI();
+        pm = new PlayerManager();
         afk = new AntiAFK();
         int timeout = getConfig().getInt("timeout");
         int commandDelay = getConfig().getInt("minutesPlayedToExecuteCommands");
@@ -63,7 +63,6 @@ public class PlayerTimer extends JavaPlugin{
 
     @Override
     public void onDisable() {
-
         for(Player p : Bukkit.getOnlinePlayers()){
             getPM().savePlayerOnDisable(p);
         }
